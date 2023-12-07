@@ -1,11 +1,11 @@
 Package: morepls
 Type: Package
-Title: Interpretation tools for PLS regression
+Title: Interpretation tools for Partial Least Squares Regression
 Version: 0.1
 Authors@R: c(person("Nicolas", "Robette", role = c("aut", "cre"), email = "nicolas.robette@uvsq.fr"))
 Imports: pls, ggplot2, ggrepel, rlang
 Suggests: plsVarSel, ggforce
-Description: Various kinds of plots (observations, variables, correlations, weights, regression coefficients and VIPs) and aids to interpretation (Q2, correlations, redundancies) for PLS regressions computed with the pls package.
+Description: Various kinds of plots (observations, variables, correlations, weights, regression coefficients and VIPs) and aids to interpretation (Q2, correlations, redundancies) for partial least squares regressions computed with the 'pls' package.
 License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
