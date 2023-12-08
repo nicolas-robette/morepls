@@ -1,6 +1,6 @@
 Package: morepls
 Type: Package
-Title: Interpretation tools for Partial Least Squares Regression
+Title: Interpretation Tools for Partial Least Squares Regression
 Version: 0.1
 Authors@R: c(person("Nicolas", "Robette", role = c("aut", "cre"), email = "nicolas.robette@uvsq.fr"))
 Imports: pls, ggplot2, ggrepel, rlang
