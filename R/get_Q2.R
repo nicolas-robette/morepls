@@ -1,19 +1,8 @@
-# library(pls)
-# data(yarn)
-# pls <- mvr(density ~ NIR,
-#            ncomp = 5,
-#            data = yarn,
-#            validation = "CV",
-#            method = "oscorespls")
-# object = pls
-# str(pls::MSEP(object, "train", intercept = TRUE)$val)
-# str(object$model)
-# nrow(object$loadings)
-
 get_Q2 <- function(object) {
 
   PRESS <- object$validation$PRESS
-  RSS <- pls::MSEP(object, "train", intercept = TRUE)$val[1,,] * nrow(object$loadings)
+  # RSS <- pls::MSEP(object, "train", intercept = TRUE)$val[1,,] * nrow(object$loadings)
+  RSS <- pls::mvrValstats(object, "train", intercept = TRUE)$SSE[1,,]
   if(!is.matrix(RSS)) RSS <- matrix(RSS, nrow = nrow(PRESS), ncol = length(RSS))
   RSS <- matrix(RSS[,-ncol(RSS)], nrow = nrow(RSS))
 
