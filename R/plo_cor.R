@@ -1,11 +1,18 @@
 plo_cor <- function(object, comps = 1:2, which = "both", min.cor = NULL,
                     lim = NULL, circles = NULL, col = NULL, size = 3.88) {
 
-  X <- object$model[[2]]
-  if(is.null(colnames(X))) colnames(X) <- rownames(object$loadings)
-  Y <- object$model[[1]]
-  if(!is.matrix(Y)) Y <- matrix(Y, nrow = length(Y))
-  if(is.null(colnames(Y))) colnames(Y) <- rownames(object$Yloadings)
+  if(is.data.frame(object$model)) {
+    response <- attr(attr(object$model, "terms"), "response")
+    Y <- as.data.frame(unclass(object$model[,response]))
+    if(is.null(colnames(Y)) | grepl("unclass(object", colnames(Y), fixed = TRUE)) colnames(Y) <- names(object$model)[response]
+    X <- as.data.frame(unclass(object$model[,-response]))
+  } else {
+    X <- object$model[[2]]
+    if(is.null(colnames(X))) colnames(X) <- rownames(object$loadings)
+    Y <- object$model[[1]]
+    if(!is.matrix(Y)) Y <- matrix(Y, nrow = length(Y))
+    if(is.null(colnames(Y))) colnames(Y) <- rownames(object$Yloadings)
+  }
 
   coord <- data.frame(stats::cor(data.frame(Y,X), object$scores[,comps]))
   names(coord) <- paste0("axis", 1:2)
