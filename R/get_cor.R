@@ -3,7 +3,7 @@ get_cor <- function(object) {
   if(is.data.frame(object$model)) {
     response <- attr(attr(object$model, "terms"), "response")
     Y <- as.data.frame(unclass(object$model[,response]))
-    if(is.null(colnames(Y)) | grepl("unclass(object", colnames(Y), fixed = TRUE)) colnames(Y) <- names(object$model)[response]
+    if(is.null(colnames(Y)) | grepl("unclass(object", colnames(Y), fixed = TRUE)[1]) colnames(Y) <- names(object$model)[response]
     X <- as.data.frame(unclass(object$model[,-response]))
   } else {
     X <- object$model[[2]]
