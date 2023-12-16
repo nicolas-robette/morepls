@@ -3,6 +3,6 @@ import(pls, ggplot2, ggrepel)
   importFrom("stats", "cor", "sd")
   importFrom("rlang", ".data")
 
-export(get_cor, get_Q2, get_red,
+export(get_cor, get_Q2, get_red, get_coef,
        plo_coef, plo_cor, plo_ctr, plo_obs, plo_var, plo_vip)
 

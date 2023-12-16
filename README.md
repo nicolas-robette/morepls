@@ -18,6 +18,8 @@ Statistical indicators :
 -   correlations between variables and components
 -   R2 and redundancies between variables and components
 -   Q2 and cumulative Q2 indexes
+-   raw and standardized coefficients
+
 
 ## Installation
 
@@ -30,6 +32,7 @@ if (!require(devtools)){
 }
 install_github("nicolas-robette/morepls")
 ```
+
 
 ## References
 
