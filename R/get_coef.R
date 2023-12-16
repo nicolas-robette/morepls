@@ -12,12 +12,7 @@ get_coef <- function(object, y = NULL, ncomp = NULL, ci = 0.95, raw = FALSE) {
   cimin <- coef - tci*sd
   cimax <- coef + tci*sd
 
-  res <- data.frame(round(coef,5),
-                    round(sd,5),
-                    round(tvalues,3),
-                    round(pvalues,5),
-                    round(cimin,5),
-                    round(cimax,5))
+  res <- data.frame(coef, sd, tvalues, pvalues, cimin, cimax)
 
   if(!is.null(object$scale) & isTRUE(raw)) {
     res$coef <- res$coef / object$scale
@@ -26,9 +21,12 @@ get_coef <- function(object, y = NULL, ncomp = NULL, ci = 0.95, raw = FALSE) {
     res$cimax <- res$cimax / object$scale
   }
 
-  # coef / object$scale
-  # object$coefficients[,y,ncomp] / object$scale
-  # diag(1/object$scale) %*% object$coefficients[,y,ncomp]
+  res$coef = round(res$coef,5)
+  res$sd = round(res$sd,5)
+  res$tvalues = round(res$tvalues,3)
+  res$pvalues = round(res$pvalues,5)
+  res$cimin = round(res$cimin,5)
+  res$cimax = round(res$cimax,5)
 
   colnames(res) <- c("coefficients", "std error", "t-value", "p-value",
                      paste0(as.character(100*(1-ci)/2),"%"),
