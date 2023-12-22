@@ -1,4 +1,6 @@
-plo_var <- function(object, comps = 1:2, which = "both", col = NULL, size = 3.88) {
+plo_var <- function(object, comps = 1:2, which = "both",
+                    col = NULL, size = 3.88,
+                    Yline = TRUE, col.Yline = "firebrick3") {
 
   dfX <- as.data.frame(object$projection)
   dfY <- pls::Yloadings(object)
@@ -25,6 +27,14 @@ plo_var <- function(object, comps = 1:2, which = "both", col = NULL, size = 3.88
                    panel.grid.minor = ggplot2::element_blank())
 
   if(!is.null(col)) p <- p + ggplot2::scale_color_manual(values = col)
+
+  if(nrow(dfY)==1 & isTRUE(Yline)) {
+    p <- p +
+      geom_abline(intercept = 0, slope = dfY[1,2]/dfY[1,1],
+                  color = col.Yline, alpha = 0.2) +
+      geom_abline(intercept = 0, slope = -dfY[1,1]/dfY[1,2],
+                  color = col.Yline, alpha = 0.2)
+  }
 
   p
 
