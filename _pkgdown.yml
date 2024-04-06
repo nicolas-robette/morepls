@@ -1,0 +1,28 @@
+url: https://nicolas-robette.github.io/morepls/
+
+development:
+  mode: auto
+
+authors:
+  Nicolas Robette:
+    href: https://github.com/nicolas-robette
+
+reference:
+
+- title: Graphical functions
+- desc: Plots for pls results
+- contents:
+  - plo_coef
+  - plo_cor
+  - plo_ctr
+  - plo_obs
+  - plo_var
+  - plo_vip
+
+- title: Statistical indicators
+- desc: Statistical indicators for pls results
+- contents:
+  - get_coef
+  - get_cor
+  - get_Q2
+  - get_red
