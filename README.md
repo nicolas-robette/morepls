@@ -1,5 +1,7 @@
 # **morepls** <img src="man/figures/morepls.png" height=140px width=120px alt="" align="right" />
 
+<br>
+
 ## Interpretation tools for PLS regression
 
 <!-- badges: start -->
