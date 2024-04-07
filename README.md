@@ -46,4 +46,4 @@ Martens, H., Næs, T. (1989) *Multivariate calibration*. Chichester: Wiley.
 
 Tenenhaus, M. (1998) *La Regression PLS. Théorie et Pratique*. Editions TECHNIP, Paris.
 
-The image in the hex sticker is outrageously taken from [https://moreplease.com/](https://moreplease.com/)
+The image in the hex sticker is outrageously taken from [https://moreplease.com/](https://moreplease.com/) from Iain Merrick.
