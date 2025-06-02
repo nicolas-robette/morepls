@@ -1,51 +1,20 @@
-# **morepls** <img src="man/figures/morepls.png" height=140px width=120px alt="" align="right" />
+# **morepls** <img src="morepls.png" height=140px width=120px alt="" align="right" />
 
 <br>
 
 ## Interpretation tools for PLS regression
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/nicolas-robette/morepls/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nicolas-robette/morepls/actions/workflows/R-CMD-check.yaml)
   [![](https://www.r-pkg.org/badges/version/morepls?color=blue)](https://cran.r-project.org/package=morepls)
   [![](http://cranlogs.r-pkg.org/badges/last-month/morepls?color=orange)](https://cran.r-project.org/package=morepls)
 <!-- badges: end -->
 
-`morepls` provides functions for the interpretation of PLS regressions.
+[`morepls`](https://nicolas-robette.frama.io/morepls/) has given up GitHub. (See Software Freedom Conservancy's [*Give Up  GitHub*](https://GiveUpGitHub.org) for details.)
 
-Graphical functions :
+You can now find this project at [https://framagit.org/nicolas-robette/morepls](https://framagit.org/nicolas-robette/morepls) instead.
 
--   two-dimensional plot of observations
--   two-dimensional plot of correlations between variables and components
--   two-dimensional plot of variables (Y loadings and X projections)
--   bar plot of regression coefficients
--   bar plot of X variables weights
--   bar plot of X variables VIPs
+Any use of this project's code by GitHub Copilot, past or present, is done without our permission.  We do not consent to GitHub's use of this project's code in Copilot.
 
-Statistical indicators :
+Join us : you can [give up GitHub](https://GiveUpGitHub.org) too!
 
--   correlations between variables and components
--   R2 and redundancies between variables and components
--   Q2 and cumulative Q2 indexes
--   raw and standardized coefficients
-
-
-## Installation
-
-Execute the following code within `R`:
-
-``` r
-if (!require(devtools)){
-    install.packages('devtools')
-    library(devtools)
-}
-install_github("nicolas-robette/morepls")
-```
-
-
-## References
-
-Martens, H., Næs, T. (1989) *Multivariate calibration*. Chichester: Wiley.
-
-Tenenhaus, M. (1998) *La Regression PLS. Théorie et Pratique*. Editions TECHNIP, Paris.
-
-The image in the hex sticker is outrageously taken from [https://moreplease.com/](https://moreplease.com/) from Iain Merrick.
+<img src="https://sfconservancy.org/static/img/GiveUpGitHub.png" width="150" />
